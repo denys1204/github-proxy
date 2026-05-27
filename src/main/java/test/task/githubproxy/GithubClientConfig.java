@@ -15,7 +15,7 @@ class GithubClientConfig {
                 .baseUrl(baseUrl)
                 .defaultHeader("Accept", "application/vnd.github.v3+json")
                 .defaultStatusHandler(status -> status.value() == 404, (_, _) -> {
-                    throw new GithubUserNotFoundException("GitHub user not found");
+                    throw new GithubUserNotFoundException();
                 })
                 .build();
 
