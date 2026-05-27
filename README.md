@@ -42,7 +42,7 @@ To run the tests:
 
 On Windows:
 ```bash
-gradlew.bat test
+.\gradlew.bat test
 ```
 
 On Linux/macOS:
@@ -56,7 +56,13 @@ On Linux/macOS:
 Retrieves all repositories for a specific user that are not forks.
 
 Endpoint:
-GET /api/v1/github/{username}
+`GET /api/v1/github/{username}`
+
+Example using `curl`:
+```bash
+curl -H "Accept: application/json" http://localhost:8080/api/v1/github/octocat
+```
+
 ```markdown
 Success Response (200 OK):
 ```
